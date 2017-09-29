@@ -19,8 +19,12 @@ public class Kata2 {
         Histogram history = new Histogram(array);
         Map <Integer, Integer> histo = history.getHistogram();
         
-        for (int i : array) {
-            
+        for (int i = 0; i<=3; i++) {
+            if(histo.containsKey(i)){
+                System.out.println("El valor: " + i + " aparece: " 
+                        + histo.get(i) + "veces");
+            }
         }
+        
     }
 }
