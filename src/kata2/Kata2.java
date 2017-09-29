@@ -11,7 +11,7 @@ import java.util.*;
  * @author amct2
  */
 public class Kata2 {
-//Kata 2 version 1
+//Kata 2 version 3
     
     public static void main(String[] args) {
         // TODO code application logic here
