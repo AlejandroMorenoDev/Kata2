@@ -11,8 +11,7 @@ import java.util.*;
  * @author amct2
  */
 public class Kata2 {
-
-//Kata 2 version 1
+//Kata 2 version 2
     
     public static void main(String[] args) {
         // TODO code application logic here
@@ -20,18 +19,15 @@ public class Kata2 {
         int value;
         HashMap<Integer, Integer> histogram= new HashMap<Integer, Integer>();
         
-        for(int i = 0; i < array.length; i++){
-            if(histogram.containsKey(array[i])== false){
-                histogram.put(array[i], 1);
-                continue;
-            }
-            value = histogram.get(array[i]) +1;
-            histogram.put(array[i], value);
+        for (int key : array) {
+            histogram.put(key, histogram.containsKey(key) ? 
+                    histogram.get(key) + 1 : 1);
         }
         for(int i = 0; i <= 3; i++){
             System.out.println("El número " +  i + " aparece: " 
                               + histogram.get(i) + "  veces");
         }
     }
+    
     
 }
